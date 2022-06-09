@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>kitech</title>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- tensorflow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- css -->
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/tablet.css" rel="stylesheet">
+    <link href="css/mobile.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="page">
+
+        <!-- sidebar -->
+        <ul class="sidemenu sidenavbar m-sidenav toggled" id="sidenav">
+
+            <!-- <br> -->
+            <!-- Sidebar - Brand -->
+            <a class="title align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <!-- <p>kitech</p> -->
+                    <img src="images/icon.svg" alt="kitech">
+                </div>
+            </a>
+            <!-- <br> -->
+            
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" id="nav-link1" href="index.html">
+                    <!-- <i class="material-icons-outlined">query_stats</i> -->
+                    <img src="images/prediction.svg" alt="">
+                    <span class="nav-link-span" id="nav-link-span1">Prediction</span></a>
+            </li>
+
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" id="nav-link2" href="recommendation.html">
+                    <!-- <i class="material-icons-outlined">youtube_searched_for</i> -->
+                    <img src="images/recomendation.svg" alt="">
+                    <span class="nav-link-span" id="nav-link-span2">Recomendation</span></a>
+            </li>
+
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+            
+            <!-- Nav Item - Dashboard -->
+            <!-- <li class="nav-item">
+                <a class="nav-link" id="nav-link3" href="map.html">
+                    <i class="material-icons-outlined">location_on</i>
+                    <span class="nav-link-span" id="nav-link-span3">Map</span></a>
+            </li> -->
+            
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+
+            <br>
+            <!-- Sidebar Toggler (Sidebar) -->
+            <!-- <div class="text-align-center display-inline">
+                <button class="sidebarToggle" id="sidebarToggle">
+                    <i class="material-icons-outlined toggle-icon" id="toggle-icon">arrow_forward_ios</i>
+                </button>
+            </div> -->
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content -->
+        <div class="display-flex" id="main">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav id="topnav">
+
+                    <!-- Sidebar Toggle (Topbar)
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button> -->
+                    <button id="mobile_sidetoggle" class="m-side-toggle">
+                        <i class="material-icons-outlined">menu</i>
+                    </button>
+
+                    <!-- Topnav bar content -->
+                    <ul class="menu">
+                        <span class="menu__title">Recomendation</span>
+                        <!-- <li class="dropdown">
+                            <a class="dropdown-toggle" href="./cast_p.html" id="userDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600">CAST</span>
+                            </a>
+                        </li>
+                         -->
+                        <!-- <div class="divider display-block"></div> -->
+
+                        <!-- Nav Item - User Information -->
+                        <!-- <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600">dropdown menu</span>
+                            </a>
+                        </li> -->
+
+                    </ul>
+
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div id="search">
+
+                    <!-- Search -->
+                    <div class="search__bar">
+                    <form class="search-inputform display-inlineblock">
+                        <div class="search-input">
+                            <input type="text" class="search-inputbox" id="search_val" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="search-input-append">
+                                <button class="search-btn-input" type="button" id="search_btn">
+                                    <i class="material-icons-outlined">search</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="tabmenu">
+                        <ul class="tabs">
+                            <li class="tab-link current" data-tab="tab-1">Width of bead</li>
+                            <li class="tab-link " data-tab="tab-2">Height of bead</li>
+                            <li class="tab-link " data-tab="tab-3">Depth of bead</li>
+                            <li class="tab-link " data-tab="tab-4">Width of HAZ</li>
+                            <li class="tab-link " data-tab="tab-5">Depth of HAZ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                    <div class="search-result">
+                       
+
+
+                        <div class="table-output tab-content current" id="tab-1">
+                            <table id="table_data" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Laser power</th>
+                                        <th>Scan speed</th>
+                                        <th>Temp. jig</th> 
+                                        <th>Temp. sub</th>
+                                        <th>Temp. powder</th>
+                                        <th>Temp. chamber</th>
+                                        <th>Hum. Cham</th>
+                                        <th>Width of bead</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-output tab-content" id="tab-2">
+                            <table id="table_data" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Laser power</th>
+                                        <th>Scan speed</th>
+                                        <th>Temp. jig</th> 
+                                        <th>Temp. sub</th>
+                                        <th>Temp. powder</th>
+                                        <th>Temp. chamber</th>
+                                        <th>Hum. Cham</th>
+                                        <th>Height of bead</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+        
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-output tab-content" id="tab-3">
+                            <table id="table_data" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Laser power</th>
+                                        <th>Scan speed</th>
+                                        <th>Temp. jig</th> 
+                                        <th>Temp. sub</th>
+                                        <th>Temp. powder</th>
+                                        <th>Temp. chamber</th>
+                                        <th>Hum. Cham</th>
+                                        <th>Depth of bead</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+        
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-output tab-content" id="tab-4">
+                            <table id="table_data" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Laser power</th>
+                                        <th>Scan speed</th>
+                                        <th>Temp. jig</th> 
+                                        <th>Temp. sub</th>
+                                        <th>Temp. powder</th>
+                                        <th>Temp. chamber</th>
+                                        <th>Hum. Cham</th>
+                                        <th>Width of HAZ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+        
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-output tab-content" id="tab-5">
+                            <table id="table_data" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Laser power</th>
+                                        <th>Scan speed</th>
+                                        <th>Temp. jig</th> 
+                                        <th>Temp. sub</th>
+                                        <th>Temp. powder</th>
+                                        <th>Temp. chamber</th>
+                                        <th>Hum. Cham</th>
+                                        <th>Depth of HAZ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Main Content -->
+            
+            <!-- Footer -->
+            <!-- <footer>
+                <div class="container">
+                    <div class="copyright text-align-center">
+                        <span>powered by Kitech</span>
+                    </div>
+                </div>
+            </footer> -->
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+
+</body>
+
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="module" src="js/search.js"></script>
+
+
+</html>
