@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>kitech</title>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- tensorflow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- css -->
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/tablet.css" rel="stylesheet">
+    <link href="css/mobile.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="page">
+
+        <!-- sidebar -->
+        <ul class="sidemenu sidenavbar m-sidenav toggled" id="sidenav">
+
+            <!-- <br> -->
+            <!-- Sidebar - Brand -->
+            <a class="title align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <!-- <p>kitech</p> -->
+                    <img src="images/icon.svg" alt="kitech">
+                </div>
+            </a>
+            <!-- <br> -->
+            
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" id="nav-link1" href="index.html">
+                    <!-- <i class="material-icons-outlined">query_stats</i> -->
+                    <img src="images/prediction.svg" alt="">
+                    <span class="nav-link-span" id="nav-link-span1">Prediction</span></a>
+            </li>
+
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" id="nav-link2" href="search.html">
+                    <!-- <i class="material-icons-outlined">youtube_searched_for</i> -->
+                    <img src="images/recomendation.svg" alt="">
+                    <span class="nav-link-span" id="nav-link-span2">Recomendation</span></a>
+            </li>
+
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+            
+            <!-- Nav Item - Dashboard -->
+            <!-- <li class="nav-item">
+                <a class="nav-link" id="nav-link3" href="map.html">
+                    <i class="material-icons-outlined">location_on</i>
+                    <span class="nav-link-span" id="nav-link-span3">Map</span></a>
+            </li> -->
+            
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+
+            <br>
+            <!-- Sidebar Toggler (Sidebar) -->
+            <!-- <div class="text-align-center display-inline">
+                <button class="sidebarToggle" id="sidebarToggle">
+                    <i class="material-icons-outlined toggle-icon" id="toggle-icon">arrow_forward_ios</i>
+                </button>
+            </div> -->
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content -->
+        <div class="display-flex" id="main">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav id="topnav">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="mobile_sidetoggle" class="m-side-toggle">
+                        <i class="material-icons-outlined">menu</i>
+                    </button>
+
+                    <!-- Topbar Search 
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form> -->
+
+                    <!-- Topnav bar content -->
+                    <ul class="menu">
+                        <span class="menu__title"></span>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="./cast_p.html" id="userDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600"></span>
+                            </a>
+                        </li>
+                        
+                        <!-- <div class="divider display-block"></div> -->
+
+                        <!-- Nav Item - User Information -->
+                        <!-- <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600">dropdown menu</span>
+                            </a>
+                        </li> -->
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div id="prediction">
+
+                    <!-- Page Heading -->
+                    <div class="page-header display-flex justify-content-center align-items-center">
+                        <h1 class="header-title"></h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+                        <div class="row__row">
+                        <div class="col-01">
+                            <div class="card-input">
+                                <div class="card-body-input">
+                                    <div class="card-row-input">
+                                        <div class="card-col-input">
+                                            <div class="card-text-input">Laser Power</div>
+                                            <input type="text" class="card-inputbox-input" id="__LP__" placeholder="260 ~ 500" onblur="javascript:_input_check('__LP__');">
+                                            <span class="_error_" id="__LP__error">ㅤ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-01">
+                            <div class="card-input">
+                                <div class="card-body-input">
+                                    <div class="card-row-input">
+                                        <div class="card-col-input">
+                                            <div class="card-text-input">Scan Speed</div>
+                                            <input type="text" class="card-inputbox-input" id="__SS__" placeholder="5 ~ 25" onblur="javascript:_input_check('__SS__');">
+                                            <span class="_error_" id="__SS__error">ㅤ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-01">
+                            <div class="card-input">
+                                <div class="card-body-input">
+                                    <div class="card-row-input">
+                                        <div class="card-col-input">
+                                            <div class="card-text-input">Temp. jig</div>
+                                            <input type="text" class="card-inputbox-input" id="__TJ__" placeholder="21 ~ 22" onblur="javascript:_input_check('__TJ__');">
+                                            <span class="_error_" id="__TJ__error">ㅤ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-01">
+                            <div class="card-input">
+                                <div class="card-body-input">
+                                    <div class="card-row-input">
+                                        <div class="card-col-input">
+                                            <div class="card-text-input">Temp. sub</div>
+                                            <input type="text" class="card-inputbox-input" id="__TS__" placeholder="21 ~ 27" onblur="javascript:_input_check('__TS__');">
+                                            <span class="_error_" id="__TS__error">ㅤ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-01">
+                            <div class="card-input">
+                                <div class="card-body-input">
+                                    <div class="card-row-input">
+                                        <div class="card-col-input">
+                                            <div class="card-text-input">Temp. powder</div>
+                                            <input type="text" class="card-inputbox-input" id="__TP__" placeholder="25 ~ 29" onblur="javascript:_input_check('__TP__');">
+                                            <span class="_error_" id="__TP__error">ㅤ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-01">
+                            <div class="card-input">
+                                <div class="card-body-input">
+                                    <div class="card-row-input">
+                                        <div class="card-col-input">
+                                            <div class="card-text-input">Temp. chamber</div>
+                                            <input type="text" class="card-inputbox-input" id="__TC__" placeholder="20 ~ 26" onblur="javascript:_input_check('__TC__');">
+                                            <span class="_error_" id="__TC__error">ㅤ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-01">
+                            <div class="card-input">
+                                <div class="card-body-input">
+                                    <div class="card-row-content">
+                                        <div class="card-col-input">
+                                            <div class="card-text-input">Hum. Cham</div>
+                                            <input type="text" class="card-inputbox-input" id="__HC__" placeholder="26 ~ 38" onblur="javascript:_input_check('__HC__');">
+                                            <span class="_error_" id="__HC__error">ㅤ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="btn-col">
+                            <button type="button" class="btn-input" id="Calc_btn">
+                                <i class="material-icons-outlined">search</i>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="card-col-chart">
+                            <div class="card-chart">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header-chart display-flex align-items-center justify-content-between">
+                                    <h6 class="card-header-text-chart">chart_01</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body-chart">
+                                    <div class="card-area-chart">
+                                        <canvas id="myChart_01"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Area Chart -->
+                        <div class="card-col-chart">
+                            <div class="card-chart">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header-chart display-flex align-items-center justify-content-between">
+                                    <h6 class="card-header-text-chart">chart_02</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body-chart">
+                                    <div class="card-area-chart">
+                                        <canvas id="myChart_02"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row last_row">
+
+                        <div class="card-col-output">
+                            <div class="card-output">
+                                <div class="card-body-output">
+                                    <div class="card-row-output align-items-center">
+                                        <div class="card-content-output">
+                                            <div class="card-text01-output">Width of bead</div>
+                                            <div class="card-text02-output" id="Width_of_bead">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-col-output">
+                            <div class="card-output">
+                                <div class="card-body-output">
+                                    <div class="card-row-output align-items-center">
+                                        <div class="card-content-output">
+                                            <div class="card-text01-output">Height of bead</div>
+                                            <div class="card-text02-output" id="Height_of_bead">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-col-output">
+                            <div class="card-output">
+                                <div class="card-body-output">
+                                    <div class="card-row-output align-items-center">
+                                        <div class="card-content-output">
+                                            <div class="card-text01-output">Depth of bead</div>
+                                            <div class="card-text02-output" id="Depth_of_bead">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-col-output">
+                            <div class="card-output">
+                                <div class="card-body-output">
+                                    <div class="card-row-output align-items-center">
+                                        <div class="card-content-output">
+                                            <div class="card-text01-output">Width of HAZ</div>
+                                            <div class="card-text02-output" id="Width_of_HAZ">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-col-output">
+                            <div class="card-output">
+                                <div class="card-body-output">
+                                    <div class="card-row-output align-items-center">
+                                        <div class="card-content-output">
+                                            <div class="card-text01-output">Depth of HAZ</div>
+                                            <div class="card-text02-output" id="Depth_of_HAZ">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+
+            </div>
+            <!-- End of Main Content -->
+            
+            <!-- Footer -->
+            <!-- <footer>
+                <div class="container">
+                    <div class="copyright text-align-center">
+                        <span>powered by Kitech</span>
+                    </div>
+                </div>
+            </footer> -->
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+
+</body>
+
+    <!-- Page level plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="module" src="js/tfjs.mjs"></script>
+
+</html>
