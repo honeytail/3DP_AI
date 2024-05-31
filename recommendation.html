@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 
     <meta charset="utf-8">
@@ -11,25 +12,31 @@
     <title>kitech</title>
 
     <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- tensorflow.js -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 
     <!-- icon -->
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
 
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- css -->
-    <link href="css/common.css" rel="stylesheet">
-    <link href="css/nav.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/tablet.css" rel="stylesheet">
-    <link href="css/mobile.css" rel="stylesheet">
+    <link href="css/cast_common.css" rel="stylesheet">
+    <link href="css/cast_nav.css" rel="stylesheet">
+    <link href="css/cast_main.css" rel="stylesheet">
+    <link href="css/cast_table.css" rel="stylesheet">
+    <link href="css/cast_mobile.css" rel="stylesheet">
+    <link href="css/cast_re_test.css" rel="stylesheet">
 
 </head>
+
 <body>
 
     <div id="page">
@@ -46,16 +53,17 @@
                 </div>
             </a>
             <!-- <br> -->
-            
+
             <!-- Divider -->
             <!-- <hr class="sidenav-divider"> -->
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" id="nav-link1" href="index.html">
+                <a class="nav-link" id="nav-link1" href="./index.html">
                     <!-- <i class="material-icons-outlined">query_stats</i> -->
                     <img src="images/prediction.svg" alt="">
-                    <span class="nav-link-span" id="nav-link-span1">Prediction</span></a>
+                    <span class="nav-link-span" id="nav-link-span1">Prediction</span>
+                </a>
             </li>
 
             <!-- Divider -->
@@ -63,22 +71,23 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" id="nav-link2" href="recommendation.html">
+                <a class="nav-link" id="nav-link2" href="./recommendation.html">
                     <!-- <i class="material-icons-outlined">youtube_searched_for</i> -->
                     <img src="images/recomendation.svg" alt="">
-                    <span class="nav-link-span" id="nav-link-span2">Recomendation</span></a>
+                    <span class="nav-link-span" id="nav-link-span2">Recomendation</span>
+                </a>
             </li>
 
             <!-- Divider -->
             <!-- <hr class="sidenav-divider"> -->
-            
+
             <!-- Nav Item - Dashboard -->
             <!-- <li class="nav-item">
                 <a class="nav-link" id="nav-link3" href="map.html">
                     <i class="material-icons-outlined">location_on</i>
                     <span class="nav-link-span" id="nav-link-span3">Map</span></a>
             </li> -->
-            
+
             <!-- Divider -->
             <!-- <hr class="sidenav-divider"> -->
 
@@ -102,24 +111,45 @@
                 <!-- Topbar -->
                 <nav id="topnav">
 
-                    <!-- Sidebar Toggle (Topbar)
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button> -->
+                    <!-- Sidebar Toggle (Topbar) -->
                     <button id="mobile_sidetoggle" class="m-side-toggle">
                         <i class="material-icons-outlined">menu</i>
                     </button>
 
+                    <!-- Topbar Search 
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form> -->
+
                     <!-- Topnav bar content -->
                     <ul class="menu">
-                        <span class="menu__title">Recomendation</span>
-                        <!-- <li class="dropdown">
-                            <a class="dropdown-toggle" href="./cast_p.html" id="userDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600">CAST</span>
-                            </a>
-                        </li>
-                         -->
+                        <span class="menu__title"></span>
+                        <li class="dropdown">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600">
+
+                                <!--
+                                <div class="page-tab">
+                                    <ul class="tabs">
+                                        <a class="tab-link" href='./index.html' style="color:black;">3DP</a>
+                                        <a class="tab-link current" href='./cast_index.html' style="color:white;">CAST</a>
+                                    </ul>
+                                </div>
+                            -->
+
+                            </span>
+                        </a>
+                    </li>
+                    </li>
+
                         <!-- <div class="divider display-block"></div> -->
 
                         <!-- Nav Item - User Information -->
@@ -132,147 +162,138 @@
 
                     </ul>
 
-
                 </nav>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div id="search">
+                <div id="prediction">
 
-                    <!-- Search -->
-                    <div class="search__bar">
-                    <form class="search-inputform display-inlineblock">
-                        <div class="search-input">
-                            <input type="text" class="search-inputbox" id="search_val" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="search-input-append">
-                                <button class="search-btn-input" type="button" id="search_btn">
-                                    <i class="material-icons-outlined">search</i>
-                                </button>
+                    <!-- Page Heading -->
+                    <div class="page-header display-flex justify-content-center align-items-center">
+                        <h1 class="header-title"></h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+                        <div class="cast_re_res">
+                            <h2>Desired Value</h2>
+                            <div class="grid-dv">
+                                <div class="field">
+                                    <label for="Compression_Strength" class="field-label">Compression Strength</label>
+                                    <input type="text" id="Compression_Strength" name="doge" class="field-input" placeholder="8.200 ~ 32.3536">
+                                </div>
+                                <div class="field">
+                                    <label for="Compactability" class="field-label">Compactability</label>
+                                    <input type="text" id="Compactability" name="doge" class="field-input" placeholder="42.8621 ~ 57.6053">
+                                </div>
+
+                                <div class="cast_btn">
+
+                                    <div class="tabmenu">
+                                        <ul class="tabs">
+                                            <li class="tab-link current" data-tab="Type_A">Model Type.A</li>
+                                            <li class="tab-link " data-tab="Type_B">Model Type.B</li>
+                                        </ul>
+                                    </div>
+
+                                    <button type="button" class="btn-input" id="search_btn">
+                                        <i class="material-icons-outlined">search</i>
+                                    </button>
+                                </div>
+
                             </div>
                         </div>
-                    </form>
 
-                    <div class="tabmenu">
-                        <ul class="tabs">
-                            <li class="tab-link current" data-tab="tab-1">Width of bead</li>
-                            <li class="tab-link " data-tab="tab-2">Height of bead</li>
-                            <li class="tab-link " data-tab="tab-3">Depth of bead</li>
-                            <li class="tab-link " data-tab="tab-4">Width of HAZ</li>
-                            <li class="tab-link " data-tab="tab-5">Depth of HAZ</li>
-                        </ul>
+                        <div class="cast_input">
+                            <div class="cast_box">
+                                <h2>Molding Sand Information</h2>
+                                <div class="grid-ms">
+                                    <div class="field">
+                                        <label for="GFD_30" class="field-label">GFD-30</label>
+                                        <input type="text" id="GFD_30" name="doge" class="field-input" placeholder="0.1">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD_40" class="field-label">GFD-40</label>
+                                        <input type="text" id="GFD_40" name="doge" class="field-input" placeholder="0.9">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD_50" class="field-label">GFD-50</label>
+                                        <input type="text" id="GFD_50" name="doge" class="field-input" placeholder="4.3">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD_70" class="field-label">GFD-70</label>
+                                        <input type="text" id="GFD_70" name="doge" class="field-input" placeholder="16.7">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD_100" class="field-label">GFD-100</label>
+                                        <input type="text" id="GFD_100" name="doge" class="field-input" placeholder="9.5">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD_140" class="field-label">GFD-140</label>
+                                        <input type="text" id="GFD_140" name="doge" class="field-input" placeholder="1.1">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD_200" class="field-label">GFD-200</label>
+                                        <input type="text" id="GFD_200" name="doge" class="field-input" placeholder="0.2">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD_270" class="field-label">GFD-270</label>
+                                        <input type="text" id="GFD_270" name="doge" class="field-input" placeholder="0.1">
+                                    </div>
+                                    <div class="field">
+                                        <label for="Pan" class="field-label">Pan</label>
+                                        <input type="text" id="Pan" name="doge" class="field-input" placeholder="0.09">
+                                    </div>
+                                    <div class="field">
+                                        <label for="AFS_Clay_Content" class="field-label">AFS Clay Content</label>
+                                        <input type="text" id="AFS_Clay_Content" name="doge" class="field-input" placeholder="10.68">
+                                    </div>
+                                    <div class="field">
+                                        <label for="AFS_Grain_Fineness_No" class="field-label">AFS Grain Fineness No</label>
+                                        <input type="text" id="AFS_Grain_Fineness_No" name="doge" class="field-input" placeholder="53.5524">
+                                    </div>
+                                    <div class="field">
+                                        <label for="BATCH_TEMPERATURE" class="field-label">Batch Temperature</label>
+                                        <input type="text" id="BATCH_TEMPERATURE" name="doge" class="field-input" placeholder="10.4053">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                    <div class="search-result">
-                       
-
-
-                        <div class="table-output tab-content current" id="tab-1">
+                    <div class="search_result">
+                        <div class="table_output">
                             <table id="table_data" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>No.</th>
-                                        <th>Laser power</th>
-                                        <th>Scan speed</th>
-                                        <th>Temp. jig</th> 
-                                        <th>Temp. sub</th>
-                                        <th>Temp. powder</th>
-                                        <th>Temp. chamber</th>
-                                        <th>Hum. Cham</th>
-                                        <th>Width of bead</th>
+                                        <th style="width: 8%;">No.</th>
+                                        <th style="width: 15%;">Batch_Bentonite</th>
+                                        <th style="width: 15%;">Batch_Dust</th>
+                                        <th style="width: 15%;">Batch_Sand</th>
+                                        <th style="width: 15%;">Batch_Water</th>
+                                        <th style="width: 15%;">Batch_Batch</th>
+                                        <th style="width: 15%;">Compression_Strength</th>
+                                        <th style="width: 15%;">Compactability</th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="table-output tab-content" id="tab-2">
-                            <table id="table_data" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th>Laser power</th>
-                                        <th>Scan speed</th>
-                                        <th>Temp. jig</th> 
-                                        <th>Temp. sub</th>
-                                        <th>Temp. powder</th>
-                                        <th>Temp. chamber</th>
-                                        <th>Hum. Cham</th>
-                                        <th>Height of bead</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-        
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="table-output tab-content" id="tab-3">
-                            <table id="table_data" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th>Laser power</th>
-                                        <th>Scan speed</th>
-                                        <th>Temp. jig</th> 
-                                        <th>Temp. sub</th>
-                                        <th>Temp. powder</th>
-                                        <th>Temp. chamber</th>
-                                        <th>Hum. Cham</th>
-                                        <th>Depth of bead</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-        
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="table-output tab-content" id="tab-4">
-                            <table id="table_data" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th>Laser power</th>
-                                        <th>Scan speed</th>
-                                        <th>Temp. jig</th> 
-                                        <th>Temp. sub</th>
-                                        <th>Temp. powder</th>
-                                        <th>Temp. chamber</th>
-                                        <th>Hum. Cham</th>
-                                        <th>Width of HAZ</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-        
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="table-output tab-content" id="tab-5">
-                            <table id="table_data" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th>Laser power</th>
-                                        <th>Scan speed</th>
-                                        <th>Temp. jig</th> 
-                                        <th>Temp. sub</th>
-                                        <th>Temp. powder</th>
-                                        <th>Temp. chamber</th>
-                                        <th>Hum. Cham</th>
-                                        <th>Depth of HAZ</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-        
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- End of Main Content -->
-            
+
+            <div class="progress-overlay" id="progress_overlay">
+                <div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" id="progress_bar_fill"></div>
+                    </div>
+                    <div class="progress-text" id="progress_text">0%</div>
+                </div>
+            </div>
+
             <!-- Footer -->
             <!-- <footer>
                 <div class="container">
@@ -290,8 +311,16 @@
 
 </body>
 
-<script type="text/javascript" src="js/nav.js"></script>
-<script type="module" src="js/search.js"></script>
+<!-- Page level plugins -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
+
+<script type="text/javascript" src="js/cast_nav.js"></script>
+<script type="module" src="js/ani_test.js"></script>
+
+
+<!--
+<script type="module" src="js/test.js"></script>
+-->
 
 </html>
