@@ -1,8 +1,8 @@
-const wb_model = await tf.loadLayersModel("model/tfjs_Width_bead/model.json"); //275, 1218
-const hb_model = await tf.loadLayersModel("model/tfjs_Height_bead/model.json"); //14, 366
-const db_model = await tf.loadLayersModel("model/tfjs_Depth_bead/model.json"); //0, 164
-const wh_model = await tf.loadLayersModel("model/tfjs_Width_HAZ/model.json"); //788, 1482
-const dh_model = await tf.loadLayersModel("model/tfjs_Depth_HAZ/model.json"); //153, 519
+const wb_model = await tf.loadLayersModel("model/model.json"); //275, 1218
+//const hb_model = await tf.loadLayersModel("model/tfjs_Height_bead/model.json"); //14, 366
+//const db_model = await tf.loadLayersModel("model/tfjs_Depth_bead/model.json"); //0, 164
+//const wh_model = await tf.loadLayersModel("model/tfjs_Width_HAZ/model.json"); //788, 1482
+//const dh_model = await tf.loadLayersModel("model/tfjs_Depth_HAZ/model.json"); //153, 519
 
 const range = {
   wb: { min: 275, max: 1218 }, // Width of bead
